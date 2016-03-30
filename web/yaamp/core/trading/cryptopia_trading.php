@@ -10,7 +10,7 @@ function doCryptopiaTrading($quick=false)
 
 	$savebalance = getdbosql('db_balances', "name='$exchange'");
 	if (is_object($savebalance)) {
-		$savebalance = 0;
+		$savebalance->balance = 0;
 		$savebalance->save();
 	}
 
