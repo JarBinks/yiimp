@@ -643,7 +643,7 @@ function updateYobitMarkets()
 			$market->name = $exchange;
 		}
 
-		$market->txfee = arraySafeVal($item,'fee',0.2);
+		$market->txfee = objSafeVal($item,'fee',0.2);
 		if ($market->disabled < 9) $market->disabled = arraySafeVal($item,'hidden',0);
 		$market->save();
 
